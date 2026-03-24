@@ -11,6 +11,14 @@ const cloudTopLayer = document.querySelector(".cloud-top");
 const cloudBottomLayer = document.querySelector(".cloud-bottom");
 let sceneTicking = false;
 
+function isMobileScene() {
+  return window.innerWidth <= 768;
+}
+
+function getStarCount() {
+  return isMobileScene() ? 25 : 90;
+}
+
 function openSidebar() {
   if (!menuToggle || !sidebar || !sidebarOverlay) {
     return;
@@ -133,10 +141,28 @@ function updateScene() {
 
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
-  const sunBox = sun.getBoundingClientRect();
-  const moonBox = moon.getBoundingClientRect();
-  const sunWidth = sunBox.width || 196;
-  const moonWidth = moonBox.width || 140;
+
+  if (isMobileScene()) {
+    const sunX = progress * viewportWidth * 0.8;
+    const sunY = viewportHeight * 0.4 - Math.sin(progress * Math.PI) * viewportHeight * 0.15;
+    const sunOpacity = 1 - Math.max(0, (progress - 0.8) / 0.2);
+
+    sun.style.transform = `translate3d(${sunX}px, ${sunY}px, 0)`;
+    sun.style.opacity = `${clamp(sunOpacity)}`;
+    root.style.setProperty("--moon-opacity", "0");
+    root.style.setProperty("--stars-opacity", "0");
+
+    if (cloudTopLayer && cloudBottomLayer) {
+      cloudTopLayer.style.transform = "none";
+      cloudBottomLayer.style.transform = "rotate(180deg)";
+      cloudTopLayer.style.filter = "none";
+      cloudBottomLayer.style.filter = "none";
+    }
+
+    return;
+  }
+
+  const sunWidth = viewportWidth <= 640 ? 152 : viewportWidth <= 980 ? 180 : 196;
 
   const sunX = lerp(-sunWidth * 0.65, viewportWidth - sunWidth * 0.35, progress);
   const sunArc = Math.sin(progress * Math.PI);
@@ -198,6 +224,9 @@ function updateScene() {
   root.style.setProperty("--sky-top", skyTop);
   root.style.setProperty("--sky-mid", skyMid);
   root.style.setProperty("--sky-bottom", skyBottom);
+
+  sun.style.transform = "";
+  sun.style.opacity = "";
 
   const dayCloud = {
     top: "#eef3f8",
@@ -277,11 +306,11 @@ function requestSceneUpdate() {
 
 window.addEventListener("scroll", requestSceneUpdate, { passive: true });
 window.addEventListener("resize", () => {
-  createStars(90);
+  createStars(getStarCount());
   updateScene();
 });
 
-createStars(90);
+createStars(getStarCount());
 updateScene();
 
 const revealTargets = document.querySelectorAll([
