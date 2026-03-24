@@ -1678,28 +1678,30 @@ html.motion-ready .reveal-on-scroll.is-visible {
   }
 
   .cloud {
-    position: absolute;
-    left: 50%;
-    width: 160vw;
-    max-width: none;
-    height: auto;
-    object-fit: contain;
-    transform-origin: center;
-  }
-
-  .cloud-top {
-    top: 0;
-    transform: translateX(-50%) !important;
-  }
-
-  .cloud-bottom {
-    bottom: 0;
-    transform: translateX(-50%) rotate(180deg) !important;
+    max-width: none !important;
+    height: auto !important;
+    object-fit: unset !important;
+    will-change: auto !important;
+    filter: none !important;
   }
 
   .sky-stage {
     overflow: hidden;
     inset: 0;
+  }
+
+  .cloud-top {
+    width: 260vw !important;
+    left: 38% !important;
+    top: -1vw !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .cloud-bottom {
+    width: 285vw !important;
+    left: 64% !important;
+    bottom: -1vw !important;
+    transform: translateX(-50%) rotate(180deg) !important;
   }
 }
 
