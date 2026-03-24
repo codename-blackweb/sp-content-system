@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shatterproof Content OS</title>
+<link rel="stylesheet" href="./styles/styles.css" />
+<script src="./scripts/main.js" defer></script>
+</head>
+<body>
+<button class="menu-trigger" id="menuToggle" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+  ☰
+</button>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+  <div class="sidebar-header">
+    <h2>Menu</h2>
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+      ×
+    </button>
+  </div>
+
+  <nav class="sidebar-nav" aria-label="Primary">
+    <a href="#dashboard">Dashboard</a>
+    <a href="#week-1">Week 1</a>
+    <a href="#week-2">Week 2</a>
+    <a href="#week-3">Week 3</a>
+    <a href="#week-4">Week 4</a>
+    <a href="#assets">Asset Library</a>
+    <a href="#signals">Signals</a>
+  </nav>
+</aside>
+
+<div class="sky-stage" aria-hidden="true">
+  <div class="sky-gradient" id="skyGradient"></div>
+  <div class="stars-layer" id="starsLayer"></div>
+  <div class="sun" id="sun"></div>
+  <div class="moon" id="moon"></div>
+  <img src="./assets/cloud-layer.png" class="cloud cloud-top" alt="" />
+  <img src="./assets/cloud-layer.png" class="cloud cloud-bottom" alt="" />
+</div>
+
+<div class="app-content page-content">
+  <div class="page-rocket" aria-hidden="true"></div>
+  <header class="top-nav">
+    <div class="nav-actions">
+      <div class="status-indicator">
+        <span class="status-dot live"></span> System Live
+      </div>
+      <button class="btn-primary" type="button">Export Board</button>
+    </div>
+  </header>
+
+<main class="container">
+  <section class="header-panel" id="dashboard">
+  <div class="eyebrow">January 2026 Content System</div>
+  <h1><span>Shatterproof Social Media Planner</span></h1>
+  <p>
+    A multi-platform planning board for awareness, education, recovery storytelling,
+    and action across Facebook, Instagram, LinkedIn, BlueSky Social, and TikTok.
+  </p>
+</section>
+
+  <section class="platform-grid dashboard-platform-grid">
+    <article class="platform-card facebook">
+      <div class="card-head">
+        <span class="platform-label">Facebook</span>
+        <span class="status-pill status-ready">Ready</span>
+      </div>
+      <div class="card-body">
+        <div class="field">
+          <span class="label">Primary Focus</span>
+          <div class="value">Community-scale awareness, practical resources, recap posts, and engagement prompts.</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="platform-card instagram">
+      <div class="card-head">
+        <span class="platform-label">Instagram</span>
+        <span class="status-pill status-ready">Ready</span>
+      </div>
+      <div class="card-body">
+        <div class="field">
+          <span class="label">Primary Focus</span>
+          <div class="value">Visually led education, story-driven advocacy, and save-worthy content.</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="platform-card linkedin">
+      <div class="card-head">
+        <span class="platform-label">LinkedIn</span>
+        <span class="status-pill status-strategy">Locked</span>
+      </div>
+      <div class="card-body">
+        <div class="field">
+          <span class="label">Primary Focus</span>
+          <div class="value">Systems insight, nonprofit leadership, and mission-led strategic framing.</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="platform-card bluesky">
+      <div class="card-head">
+        <span class="platform-label">BlueSky</span>
+        <span class="status-pill status-live">Live</span>
+      </div>
+      <div class="card-body">
+        <div class="field">
+          <span class="label">Primary Focus</span>
+          <div class="value">Concise, repostable takes, real-time prompts, and conversation-driving text posts.</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="platform-card tiktok">
+      <div class="card-head">
+        <span class="platform-label">TikTok</span>
+        <span class="status-pill status-live">Live</span>
+      </div>
+      <div class="card-body">
+        <div class="field">
+          <span class="label">Primary Focus</span>
+          <div class="value">Fast education, narrative clips, and emotionally resonant short-form storytelling.</div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="control-bar">
+    <div class="control-left">
+      <div class="fake-search">
+        <span class="search-label">Search planner</span>
+      </div>
+
+      <div class="control-pills">
+        <span class="control-pill active">All Platforms</span>
+        <span class="control-pill">Awareness</span>
+        <span class="control-pill">Education</span>
+        <span class="control-pill">Recovery</span>
+        <span class="control-pill">Action</span>
+      </div>
+    </div>
+
+    <div class="control-right">
+      <span class="control-chip">Sort: By Week</span>
+      <span class="control-chip">View: Board</span>
+      <span class="control-chip">Status: Active</span>
+    </div>
+  </section>
+
+  <section class="meta-strip">
+    <div class="meta-chip"><span class="label">Prepared By</span><span class="value">Ezra Blackwood</span></div>
+    <div class="meta-chip"><span class="label">Prepared For</span><span class="value">Shatterproof</span></div>
+    <div class="meta-chip"><span class="label">Presented On</span><span class="value">12/29/2025</span></div>
+    <div class="meta-chip"><span class="label">Presented To</span><span class="value">Cornish/Fox, VP-HR, VP-MarComm</span></div>
+    <div class="meta-chip"><span class="label">Status</span><span class="value">Approved, No revisions needed</span></div>
+  </section>
+
+  <section class="board-grid">
+    <div class="module">
+      <div class="module-header header-coral">
+        <h2>Planner Overview</h2>
+        <p>A fully integrated, multi-platform content plan built to move the audience from awareness into understanding, then into hope, then into action.</p>
+      </div>
+      <div class="module-body">
+        <div class="principles-list">
+          <div class="principle"><strong>How to use this planner</strong>Use weekly overview blocks to guide theme, tone, and CTA intensity. Use the daily cards for execution-level planning and production handoff.</div>
+          <div class="principle"><strong>Planner logic</strong>This is a progressive content system, not a collection of isolated posts. Lower-friction asks appear first. More direct action prompts show up after context and credibility are established.</div>
+          <div class="principle"><strong>Content principles</strong>Clarity over jargon. Human tone over institutional tone. Visual simplicity over clutter. Educational value over filler.</div>
+        </div>
+        <div class="callout"><strong>Execution note:</strong> Timing windows should guide publishing, not dictate it rigidly. Prioritize relevance, campaign context, and real performance signals over blind adherence to schedule.</div>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="module-header header-yellow">
+        <h2>Platform Posting Cadence</h2>
+        <p>Recommended publishing rhythm and channel-specific rationale.</p>
+      </div>
+      <div class="module-body">
+        <div class="cadence-grid">
+<div class="cadence-card">
+      <div class="platform-row"><span class="pill facebook">Facebook</span><span class="pill">Daily</span></div>
+      <p><strong>Best windows:</strong> Mid-morning to early afternoon; Sunday early afternoon</p>
+      <p><strong>Strategic note:</strong> Community-scale awareness, practical resources, recap posts, and engagement prompts.</p>
+    </div><div class="cadence-card">
+      <div class="platform-row"><span class="pill instagram">Instagram</span><span class="pill">Daily</span></div>
+      <p><strong>Best windows:</strong> Early afternoon, with Wednesday evening and weekend exceptions</p>
+      <p><strong>Strategic note:</strong> Visually led education, reels, story-driven advocacy, and saves/shares.</p>
+    </div><div class="cadence-card">
+      <div class="platform-row"><span class="pill linkedin">LinkedIn</span><span class="pill">Wednesdays and Fridays</span></div>
+      <p><strong>Best windows:</strong> Wednesday 4:00 PM, Friday 3:00 PM</p>
+      <p><strong>Strategic note:</strong> Professional framing, systems insight, nonprofit strategy, and thought leadership.</p>
+    </div><div class="cadence-card">
+      <div class="platform-row"><span class="pill bluesky">BlueSky</span><span class="pill">Monday–Friday</span></div>
+      <p><strong>Best windows:</strong> 9:00–11:00 AM weekday windows</p>
+      <p><strong>Strategic note:</strong> Concise, repostable takes, real-time prompts, and conversation-driving text posts.</p>
+    </div><div class="cadence-card">
+      <div class="platform-row"><span class="pill tiktok">TikTok</span><span class="pill">Monday, Saturday, Sunday</span></div>
+      <p><strong>Best windows:</strong> Monday 1:00 PM, Saturday 5:00 PM, Sunday 9:00 AM</p>
+      <p><strong>Strategic note:</strong> Fast education, narrative clips, FAQ-style videos, and emotionally resonant short-form storytelling.</p>
+    </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-topbar">
+    <div class="section-tabs">
+      <span class="section-tab active">Weekly Overview</span>
+      <span class="section-tab">Execution</span>
+      <span class="section-tab">Asset Library</span>
+      <span class="section-tab">Signals</span>
+    </div>
+  </div>
+
+  <section class="module">
+    <div class="module-header header-sky">
+      <h2>Weekly Overviews</h2>
+      <p>Editorial logic behind each week and how the sequence builds momentum over the month.</p>
+    </div>
+    <div class="module-body">
+      <div class="themes-grid">
+        <div class="theme-card">
+          <h3>Week 1 — Break the Stigma</h3>
+          <div class="status-row">
+            <span class="status-pill live">Ready</span>
+            <span class="status-pill strategy">Strategy Locked</span>
+          </div>
+          <p><strong>Strategic purpose:</strong> Challenge misconceptions and create emotionally resonant, stigma-safe awareness content.</p>
+          <p><strong>Primary CTA focus:</strong> Shares, saves, comments, conversation</p>
+          <div class="week-actions">
+            <span class="week-action">Open</span>
+            <span class="week-action">Review</span>
+            <span class="week-action">Export</span>
+          </div>
+        </div>
+        <div class="theme-card">
+          <h3>Week 2 — Understanding Treatment</h3>
+          <div class="status-row">
+            <span class="status-pill live">Ready</span>
+            <span class="status-pill strategy">Strategy Locked</span>
+          </div>
+          <p><strong>Strategic purpose:</strong> Reduce confusion and make treatment information feel practical, understandable, and less intimidating.</p>
+          <p><strong>Primary CTA focus:</strong> Saves, clicks to resources, confidence-based engagement</p>
+          <div class="week-actions">
+            <span class="week-action">Open</span>
+            <span class="week-action">Review</span>
+            <span class="week-action">Export</span>
+          </div>
+        </div>
+        <div class="theme-card">
+          <h3>Week 3 — Path to Recovery</h3>
+          <div class="status-row">
+            <span class="status-pill live">Ready</span>
+            <span class="status-pill strategy">Strategy Locked</span>
+          </div>
+          <p><strong>Strategic purpose:</strong> Center recovery as real, non-linear, deeply human, and still possible.</p>
+          <p><strong>Primary CTA focus:</strong> Story sharing, emotional connection, saves, supportive comments</p>
+          <div class="week-actions">
+            <span class="week-action">Open</span>
+            <span class="week-action">Review</span>
+            <span class="week-action">Export</span>
+          </div>
+        </div>
+        <div class="theme-card">
+          <h3>Week 4 — Taking Action</h3>
+          <div class="status-row">
+            <span class="status-pill live">Ready</span>
+            <span class="status-pill strategy">Strategy Locked</span>
+          </div>
+          <p><strong>Strategic purpose:</strong> Convert attention into practical next steps across tools, volunteering, events, giving, and advocacy.</p>
+          <p><strong>Primary CTA focus:</strong> Clicks, sign-ups, link taps, volunteer interest, donations</p>
+          <div class="week-actions">
+            <span class="week-action">Open</span>
+            <span class="week-action">Review</span>
+            <span class="week-action">Export</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="january-layout">
+  <div class="calendar-keydates-row">
+    <div class="calendar-column">
+      <!-- LEFT: Calendar -->
+      <div class="calendar-panel">
+        <div class="mini-calendar">
+          <div class="mini-cal-header">January 2026 Reference Calendar</div>
+
+          <div class="mini-cal-grid mini-cal-days">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+
+          <div class="mini-cal-grid mini-cal-dates">
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="key-date holiday">1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+            <div>18</div>
+
+            <div class="key-date holiday">19</div>
+            <div>20</div>
+            <div>21</div>
+            <div>22</div>
+            <div>23</div>
+            <div>24</div>
+            <div>25</div>
+
+            <div>26</div>
+            <div>27</div>
+            <div>28</div>
+            <div>29</div>
+            <div>30</div>
+            <div>31</div>
+            <div class="empty"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <aside class="key-dates-panel" id="signals">
+      <div class="content-card">
+        <h2>January Signals</h2>
+
+        <div class="content-block">
+          <div class="section-label-row">
+            <span class="section-tag tag-holiday">Federal Holidays</span>
+          </div>
+          <h3>Federal Holidays (U.S.)</h3>
+          <p>
+            These are the dates most likely to affect business operations, scheduling,
+            and social performance. Expect lower engagement around New Year’s Day and
+            the usual long-weekend slowdown around MLK Day.
+          </p>
+          <ul>
+            <li><strong>January 1</strong> — New Year’s Day</li>
+            <li><strong>January 19</strong> — Martin Luther King Jr. Day</li>
+          </ul>
+        </div>
+
+        <div class="signals-row">
+          <div class="signal-card awareness-card">
+            <div class="section-label-row">
+              <span class="section-tag tag-awareness">Awareness</span>
+            </div>
+            <h3>High-Value Awareness Days</h3>
+            <p>
+              These are strong credibility-building moments, especially for mission-driven
+              brands. They tend to work well for educational content, thoughtful storytelling,
+              and brand-aligned awareness posts.
+            </p>
+
+            <div class="subgroup">
+              <h4>Month-Long Observances</h4>
+              <ul>
+                <li>Dry January</li>
+                <li>National Mentoring Month</li>
+                <li>Mental Wellness Month</li>
+              </ul>
+            </div>
+
+            <div class="subgroup">
+              <h4>Key Dates</h4>
+              <ul>
+                <li><strong>January 4</strong> — World Braille Day</li>
+                <li><strong>January 11</strong> — Human Trafficking Awareness Day</li>
+                <li><strong>January 13</strong> — Korean American Day</li>
+                <li><strong>January 19</strong> — Martin Luther King Jr. Day</li>
+                <li><strong>January 20</strong> — Inauguration Day <span class="note">(every four years)</span></li>
+                <li><strong>January 24</strong> — International Day of Education</li>
+                <li><strong>January 27</strong> — International Holocaust Remembrance Day</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="signal-card engagement-card">
+            <div class="section-label-row">
+              <span class="section-tag tag-engagement">Engagement</span>
+            </div>
+            <h3>High-Engagement Days</h3>
+            <p>
+              These are lighter, more shareable moments that can help drive reach and interaction.
+              Good for visibility. Not where you build authority.
+            </p>
+            <ul>
+              <li><strong>January 2</strong> — National Science Fiction Day</li>
+              <li><strong>January 5</strong> — National Bird Day</li>
+              <li><strong>January 10</strong> — Houseplant Appreciation Day</li>
+              <li><strong>January 14</strong> — Dress Up Your Pet Day</li>
+              <li><strong>January 21</strong> — National Hugging Day</li>
+              <li><strong>January 23</strong> — National Pie Day</li>
+              <li><strong>January 24</strong> — Compliment Day</li>
+              <li><strong>January 29</strong> — Puzzle Day</li>
+            </ul>
+          </div>
+
+          <div class="signal-card notes-card">
+            <div class="section-label-row">
+              <span class="section-tag tag-notes">Notes</span>
+            </div>
+            <h3>Notes</h3>
+            <p>
+              Use January to lead with grounded optimism rather than generic reset language.
+              Dry January references should stay practical and stigma-safe. MLK content should
+              only appear where it is directly tied to mission and values. Mid-month is the best
+              time to increase save-worthy educational content as motivation drops. Late January
+              is the right moment to pivot messaging toward sustainability, systems, and long-term change.
+            </p>
+          </div>
+        </div>
+      </div>
+  </aside>
+
+  <!-- FULL WIDTH: Content Opportunities -->
+  <section class="strategic-angles">
+    <div class="content-card">
+      <h2>Content Opportunities</h2>
+      <p class="section-intro">
+        Use these themes to shape January content in a way that feels timely,
+        intentional, and actually useful.
+      </p>
+
+      <div class="angle-grid">
+        <div class="angle-card angle-reset">
+          <span class="angle-kicker">Jan 1–10</span>
+          <h3>1. Reset Window</h3>
+          <p>
+            The natural opening for content built around fresh starts, momentum,
+            and realistic forward movement.
+          </p>
+          <ul>
+            <li>Behavior change</li>
+            <li>Goal setting</li>
+            <li>Systems over motivation</li>
+          </ul>
+        </div>
+
+        <div class="angle-card angle-midmonth">
+          <span class="angle-kicker">Mid-January</span>
+          <h3>2. Mid-Month Drop-Off</h3>
+          <p>
+            Motivation starts fading here. This is where more honest, contrarian,
+            truth-based content tends to land.
+          </p>
+          <ul>
+            <li>Resolution fatigue</li>
+            <li>Accountability</li>
+            <li>Messaging that cuts through the fluff</li>
+          </ul>
+        </div>
+
+        <div class="angle-card angle-mlk">
+          <span class="angle-kicker">MLK Window</span>
+          <h3>3. Purpose + Impact</h3>
+          <p>
+            Best approached through substance, not performance. Values-based storytelling
+            only works when it is genuinely tied to the mission.
+          </p>
+          <ul>
+            <li>Social impact storytelling</li>
+            <li>Mission alignment</li>
+            <li>Values-led messaging with depth</li>
+          </ul>
+        </div>
+
+        <div class="angle-card angle-late-january">
+          <span class="angle-kicker">Late January</span>
+          <h3>4. Long-Term Sustainability</h3>
+          <p>
+            A strong window for shifting the conversation away from hype and toward
+            endurance, systems, and actual change.
+          </p>
+          <ul>
+            <li>Long-term habits</li>
+            <li>Systems thinking</li>
+            <li>Real change over quick wins</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="avoid-box">
+        <h3>Common Misfires</h3>
+        <ul>
+          <li>Generic “New Year, New Me” messaging</li>
+          <li>Performative MLK content with no real tie to your brand or mission</li>
+          <li>Random national-day posts that add noise but no value</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>
+
+  <section class="module" id="assets">
+  <div class="module-header header-coral">
+    <div class="asset-header">
+      <h2>Asset Library</h2>
+      <button class="upload-btn" type="button">Upload New</button>
+    </div>
+    <p>Reference thumbnails for creative assets used across the monthly planner.</p>
+  </div>
+  <div class="module-body">
+    <div class="asset-grid">
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/prepared.png" alt="Prepared" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Prepared</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/doesnt.png" alt="Doesn’t" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Doesn’t</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/mean.png" alt="Mean" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Mean</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/expecting.png" alt="Expecting" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Expecting</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/recovery-forest.png" alt="Recovery Is Possible" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Recovery Is Possible</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/not-a-choice.PNG" alt="Addiction Isn’t a Choice" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Addiction Isn’t a Choice</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/addiction-medical-condition.PNG" alt="Medical Condition" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Medical Condition</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/dry-january-quiz.png" alt="Dry January Quiz" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Dry January Quiz</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/treatment-atlas-impact.png" alt="Treatment Atlas Impact" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Treatment Atlas Impact</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/family-support.jpg" alt="Family Support" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Family Support</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/caregiver-support.jpg" alt="Caregiver Support" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Caregiver Support</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/community-connection.jpg" alt="Community Connection" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Community Connection</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/community.png" alt="Community" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Community</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/lifeline.png" alt="Lifeline" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Lifeline</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/unshame.png" alt="Unshame Campaign" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Unshame Campaign</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/anastasia-unshame.png" alt="Unshame Story" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Unshame Story</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/stigma-is-real.png" alt="Stigma Is Real" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Stigma Is Real</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/addiction-stigma.png" alt="Addiction Stigma" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Addiction Stigma</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/remove-stigma.png" alt="Remove Stigma" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Remove Stigma</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/reentering-communities.png" alt="Reentering Communities" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Reentering Communities</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/family-banner.png" alt="Family Banner" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Family Banner</div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-media">
+          <img src="./assets/stronger-together.png" alt="Stronger Together" />
+          <div class="asset-overlay" aria-hidden="true">
+            <div class="asset-icons">
+              <span class="asset-action"><span class="asset-icon asset-icon-1"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-2"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-3"></span></span>
+              <span class="asset-action"><span class="asset-icon asset-icon-4"></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="asset-caption">Stronger Together</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="weeks-stack">
+<div class="week-block">
+      <div class="week-overview week-1" id="week-1">
+        <div class="top">
+          <h2>Week 1: Break the Stigma</h2>
+          <div class="status-row">
+            <span class="status-pill live">Ready</span>
+            <span class="status-pill strategy">Strategy Locked</span>
+          </div>
+          <p><strong>Objective:</strong> Challenge misconceptions and create emotionally resonant, stigma-safe awareness content that reframes addiction as a health issue rather than a moral failing.</p>
+          <p><strong>Visual tone:</strong> Bold, editorial, human, and credible. Strong typography, high contrast, documentary-style portraiture, and emotionally grounded compositions.</p>
+          <p><strong>Primary CTA focus:</strong> Low-friction engagement: shares, saves, comments, and conversation.</p>
+          <div class="week-actions">
+            <span class="week-action">Open</span>
+            <span class="week-action">Review</span>
+            <span class="week-action">Export</span>
+          </div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-label">Primary Focus</div><div class="m-value">Awareness</div></div>
+          <div class="metric"><div class="m-label">Audience State</div><div class="m-value">Early awareness</div></div>
+          <div class="metric"><div class="m-label">What this week is doing</div><div class="m-value">Reduce judgment and widen the top of the funnel.</div></div>
+          <div class="metric"><div class="m-label">CTA Intensity</div><div class="m-value">Low-friction engagement: shares, saves, comments, and conversation.</div></div>
+        </div>
+      </div>
+      <div class="day-grid"><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Stigma Reframe</div><span class="day-sub">Day 1 · Break the Stigma</span></div>
+            <div class="day-date">Jan 1</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Static · Awareness</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Addiction is not a moral failure.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Split-panel myth-versus-reality graphic with bold editorial typography.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">We need to stop framing addiction as a character flaw and start treating it like the health issue it is.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this to help change the conversation.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Carousel · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">5 myths about addiction that need to die.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Five-slide carousel with bold statement covers and clean supporting visuals.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Swipe through the myths that continue to keep people misinformed and people suffering in silence.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Save this and send it to someone who still gets this wrong.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">9:00 AM · Text · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Addiction is a health issue. Not a character flaw.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post optimized for repostability.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The science is clear. The stigma is a choice.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Language Matters</div><span class="day-sub">Day 2 · Break the Stigma</span></div>
+            <div class="day-date">Jan 2</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Graphic · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">The words we use can either help or harm.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Before-and-after language comparison card.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Changing the language around addiction changes how people are seen, treated, and supported.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this with someone who works with people.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Reel · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Stop saying this.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Fast-cut talking-head reel with on-screen replacements for harmful phrases.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">A few small language shifts can have a massive impact.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Comment the phrase you hear most often.</div></div>
+            </div><div class="platform-card linkedin">
+              <div class="platform-head">
+                <div class="platform-name">LinkedIn</div>
+                <div class="meta">3:00 PM · Text · Thought Leadership</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Language is an operational issue, not just a communications issue.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Minimal text-first post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The words organizations normalize directly affect trust, access, and outcomes.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Add your perspective.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">11:00 AM · Text · Conversation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Stigma often hides inside everyday language.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">That is exactly why words matter more than people think.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Reply with one phrase you think needs to go.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">The Scale of Impact</div><span class="day-sub">Day 3 · Break the Stigma</span></div>
+            <div class="day-date">Jan 3</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Stat Graphic · Awareness</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Addiction touches far more lives than most people realize.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Bold stat-led image with crowd photography.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">This is not rare. It is not distant. It is affecting families, workplaces, and communities every day.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this statistic.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">11:00 AM · Static · Awareness</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Addiction does not have one face.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Human-centered portrait with editorial text overlay.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">It does not look the same from person to person, which is one reason so many people miss it.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Save this reminder.</div></div>
+            </div><div class="platform-card tiktok">
+              <div class="platform-head">
+                <div class="platform-name">TikTok</div>
+                <div class="meta">5:00 PM · Video · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What people still get wrong about addiction in under 45 seconds.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Direct-to-camera explainer with captions.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">A quick reality check people clearly still need.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Send this to one person.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Why Stigma Delays Help</div><span class="day-sub">Day 4 · Break the Stigma</span></div>
+            <div class="day-date">Jan 4</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">1:00 PM · Explainer · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Stigma does real damage long before treatment ever starts.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Simple pathway diagram showing shame, silence, delay, crisis.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">People do not just battle a condition. They also battle judgment, fear, and misunderstanding.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this with someone who still underestimates stigma.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">2:00 PM · Story Series · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">3 ways stigma shows up in everyday life.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Interactive story slides with polls and response stickers.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The point is not just to spot it. The point is to stop repeating it.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Tap through and answer the poll.</div></div>
+            </div><div class="platform-card tiktok">
+              <div class="platform-head">
+                <div class="platform-name">TikTok</div>
+                <div class="meta">9:00 AM · Short Video · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Three stigma myths debunked fast.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Punchy myth-busting reel with text overlays.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Because clearly we still need to say this louder.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Community Reflection</div><span class="day-sub">Day 5 · Break the Stigma</span></div>
+            <div class="day-date">Jan 5</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Question Post · Conversation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Where do you see stigma show up most clearly?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-led prompt on muted background.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Workplace. Family. School. Healthcare. Media. It shows up everywhere. Where do you see it most?</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Leave a comment.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">4:30 PM · Story Q&amp;A · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Ask us anything about stigma, language, or addiction.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Question box story with layered collage design.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">We want the real questions, not the polished ones.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Drop your question.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">10:00 AM · Text · Conversation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What does stigma look like where you live?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Specific examples matter more than vague agreement.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Reply with one example.</div></div>
+            </div><div class="platform-card tiktok">
+              <div class="platform-head">
+                <div class="platform-name">TikTok</div>
+                <div class="meta">1:00 PM · Response Video · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Why does language around addiction matter so much?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Direct answer-style video.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Because language influences judgment, policy, care, and whether people seek help at all.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Comment your next question.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Community in Action</div><span class="day-sub">Day 6 · Break the Stigma</span></div>
+            <div class="day-date">Jan 6</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Community Highlight · Awareness</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Real change happens through ordinary people choosing compassion.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Volunteer or community action photo.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">This work moves because people keep showing up for it.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this to recognize the people doing the work.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · UGC Repost · Trust</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Real people. Real impact.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Supporter-submitted content with clean branded framing.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Mission-driven work lands harder when it is visibly human.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Tag someone who would care about this.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">9:00 AM · Text · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Awareness becomes change when people act on it.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The quiet work still counts.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Week 1 Reflection</div><span class="day-sub">Day 7 · Break the Stigma</span></div>
+            <div class="day-date">Jan 7</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">12:30 PM · Reflection Post · Conversation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What changed for you this week?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Collage recap with documentary-style details.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">We challenged myths all week. What truth are you carrying forward now?</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Comment with one takeaway.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">6:00 PM · Recap Reel · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">A week of breaking stigma.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Fresh montage reel with unseen b-roll.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">One post won’t fix this. Repetition, clarity, and honesty might.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Follow for Week 2.</div></div>
+            </div><div class="platform-card linkedin">
+              <div class="platform-head">
+                <div class="platform-name">LinkedIn</div>
+                <div class="meta">4:00 PM · Summary Post · Thought Leadership</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What stigma actually costs organizations and communities.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Professional summary graphic with three key takeaways.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">This issue does not stay social. It becomes structural fast.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this with leadership.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">10:00 AM · Text · Reflection</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What changed for you this week?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">One useful insight is more valuable than ten empty slogans.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Reply with one takeaway.</div></div>
+            </div></div></div></article></div></div><div class="week-block">
+      <div class="week-overview week-2" id="week-2">
+        <div class="top">
+          <h2>Week 2: Understanding Treatment</h2>
+          <div class="status-row">
+            <span class="status-pill live">Ready</span>
+            <span class="status-pill strategy">Strategy Locked</span>
+          </div>
+          <p><strong>Objective:</strong> Educate audiences on evidence-based treatment, care navigation, and barriers to access while reducing confusion around treatment language.</p>
+          <p><strong>Visual tone:</strong> Clear, reassuring, informative, and structured. Calm blues and greens, healthcare-adjacent cues, approachable educational design.</p>
+          <p><strong>Primary CTA focus:</strong> Medium-friction engagement: saves, clicks to resources, and practical confidence-building.</p>
+          <div class="week-actions">
+            <span class="week-action">Open</span>
+            <span class="week-action">Review</span>
+            <span class="week-action">Export</span>
+          </div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-label">Primary Focus</div><div class="m-value">Education</div></div>
+          <div class="metric"><div class="m-label">Audience State</div><div class="m-value">Active education</div></div>
+          <div class="metric"><div class="m-label">What this week is doing</div><div class="m-value">Turn treatment from abstract and intimidating into structured and understandable.</div></div>
+          <div class="metric"><div class="m-label">CTA Intensity</div><div class="m-value">Medium-friction engagement: saves, clicks to resources, and practical confidence-building.</div></div>
+        </div>
+      </div>
+      <div class="day-grid"><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Evidence-Based Treatment</div><span class="day-sub">Day 8 · Understanding Treatment</span></div>
+            <div class="day-date">Jan 8</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Carousel · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What does evidence-based treatment actually mean?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Five-panel educational carousel with calm clinical cues.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The phrase gets thrown around constantly. Here is what it should actually mean in practice.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this guide.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Carousel · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Evidence-based treatment, explained clearly.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Numbered slides with distinct illustration-photo pairings.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Less buzzword nonsense. More actual clarity.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Save this.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">9:00 AM · Text · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Treatment works best when it is evidence-based and accessible.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">That should not be controversial, but apparently here we are.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">When to Seek Help</div><span class="day-sub">Day 9 · Understanding Treatment</span></div>
+            <div class="day-date">Jan 9</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Checklist Graphic · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Signs it may be time to seek help are often quieter than people expect.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Checklist card on muted textured background.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Not every warning sign is dramatic. Some are cumulative. Some are quiet. They still matter.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this checklist.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Reel · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">These signs are easy to dismiss until they shape your whole day.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Routine-based visual narrative with captions.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">A lot of people wait because they think it has to get worse first.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this with someone who may need it.</div></div>
+            </div><div class="platform-card linkedin">
+              <div class="platform-head">
+                <div class="platform-name">LinkedIn</div>
+                <div class="meta">3:00 PM · Insight Post · Thought Leadership</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Access to treatment is still broken in deeply avoidable ways.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Data-forward layout with barrier categories.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">This is a design problem, an equity problem, and an operations problem all at once.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Comment on the biggest barrier.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">11:00 AM · Text · Conversation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Recognition is not weakness.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">A lot of people need permission to stop pretending they are fine.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Treatment Is Not One-Size-Fits-All</div><span class="day-sub">Day 10 · Understanding Treatment</span></div>
+            <div class="day-date">Jan 10</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Myth Breakdown · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">No two treatment paths look exactly alike.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Side-by-side treatment journey comparison graphic.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Different does not mean less valid. It means treatment is being tailored to real people.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">11:00 AM · Static · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Recovery is not one-size-fits-all.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Branching-path concept with documentary photo support.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">There is no single script for healing and that is fine.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Save this post.</div></div>
+            </div><div class="platform-card tiktok">
+              <div class="platform-head">
+                <div class="platform-name">TikTok</div>
+                <div class="meta">5:00 PM · Educational Video · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What treatment really looks like in real life.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Voiceover plus practical daily-life b-roll.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Because a lot of people still picture one dramatic movie scene and call it understanding.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Tool Spotlight</div><span class="day-sub">Day 11 · Understanding Treatment</span></div>
+            <div class="day-date">Jan 11</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">1:00 PM · Resource Spotlight · Action</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">If finding help feels overwhelming, start with one tool.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Phone mockup featuring Treatment Atlas.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">When people do not know where to begin, clarity matters more than inspiration.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Click through and explore.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">2:00 PM · Guide · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">How to use Treatment Atlas in 3 steps.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Clean step-by-step guide slides.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">This is what useful looks like.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Save this guide.</div></div>
+            </div><div class="platform-card tiktok">
+              <div class="platform-head">
+                <div class="platform-name">TikTok</div>
+                <div class="meta">9:00 AM · Tutorial · Action</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">A fast walkthrough of how to start using Treatment Atlas.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Screen recording with voiceover.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">No fluff. Just the path.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Send this to one person.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">How Confusing Treatment Feels</div><span class="day-sub">Day 12 · Understanding Treatment</span></div>
+            <div class="day-date">Jan 12</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Poll · Conversation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">How confident do you feel navigating treatment options?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Clean numeric poll card.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">A lot of people are expected to make critical decisions while overwhelmed and under-informed.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Vote and comment.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">4:30 PM · Story Poll · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Have you ever tried to compare treatment options and felt overwhelmed?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Interactive story poll sequence.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The process loses people fast when it is not designed clearly.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Tap your answer.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">10:00 AM · Text · Conversation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What makes treatment information hardest to trust or understand?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Specific obstacles tell the truth better than vague agreement.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Reply with your barrier.</div></div>
+            </div><div class="platform-card tiktok">
+              <div class="platform-head">
+                <div class="platform-name">TikTok</div>
+                <div class="meta">1:00 PM · Question Response · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Why is treatment information so confusing?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Whiteboard-style explanation video.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Because too much of it is built for institutions, not the people who actually need it.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Comment your question.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Live Q&amp;A Push</div><span class="day-sub">Day 13 · Understanding Treatment</span></div>
+            <div class="day-date">Jan 13</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Promo Graphic · Attendance</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Join us for a live Q&amp;A on treatment options.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Event promo with host photos and time details.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">If people have questions, they deserve direct answers.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">RSVP now.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Countdown Story · Attendance</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Treatment Q&amp;A is coming up.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Countdown story with studio portrait and notes overlay.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Set the reminder now instead of forgetting later.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Set reminder.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">9:00 AM · Text · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">We are going live to answer real questions about treatment.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Useful conversation beats polished vagueness every time.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Week 2 Reflection</div><span class="day-sub">Day 14 · Understanding Treatment</span></div>
+            <div class="day-date">Jan 14</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">12:30 PM · Recap Post · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">This week focused on treatment clarity. Here are the biggest takeaways.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Composite recap graphic.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Confusion helps no one. Clear guidance does.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this recap.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">6:00 PM · Recap Reel · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">A week of making treatment easier to understand.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Montage reel with tutorial and care-setting visuals.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The goal is not more content. The goal is less confusion.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Follow for Week 3.</div></div>
+            </div><div class="platform-card linkedin">
+              <div class="platform-head">
+                <div class="platform-name">LinkedIn</div>
+                <div class="meta">4:00 PM · Summary Post · Thought Leadership</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Treatment access is a design and equity issue.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Professional matrix graphic.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The friction points are visible. The question is whether anyone is willing to fix them.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this with leadership.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">10:00 AM · Text · Reflection</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What treatment takeaway stayed with you most?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Useful information should stick because it is clear, not because it is loud.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Reply with one takeaway.</div></div>
+            </div></div></div></article></div></div><div class="week-block">
+      <div class="week-overview week-3" id="week-3">
+        <div class="top">
+          <h2>Week 3: Path to Recovery</h2>
+          <div class="status-row">
+            <span class="status-pill live">Ready</span>
+            <span class="status-pill strategy">Strategy Locked</span>
+          </div>
+          <p><strong>Objective:</strong> Center recovery as a real, non-linear, deeply human process by highlighting hope, support systems, and practical encouragement.</p>
+          <p><strong>Visual tone:</strong> Warm, hopeful, intimate, and dignified. Natural light, candid portraiture, softer palettes, and movement-driven compositions.</p>
+          <p><strong>Primary CTA focus:</strong> Emotional connection: supportive comments, story sharing, and saves.</p>
+          <div class="week-actions">
+            <span class="week-action">Open</span>
+            <span class="week-action">Review</span>
+            <span class="week-action">Export</span>
+          </div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-label">Primary Focus</div><div class="m-value">Hope</div></div>
+          <div class="metric"><div class="m-label">Audience State</div><div class="m-value">Trust and hope</div></div>
+          <div class="metric"><div class="m-label">What this week is doing</div><div class="m-value">Humanize recovery and reinforce that progress still counts.</div></div>
+          <div class="metric"><div class="m-label">CTA Intensity</div><div class="m-value">Emotional connection: supportive comments, story sharing, and saves.</div></div>
+        </div>
+      </div>
+      <div class="day-grid"><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Recovery Looks Human</div><span class="day-sub">Day 15 · Path to Recovery</span></div>
+            <div class="day-date">Jan 15</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Story Highlight · Hope</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Recovery is possible, but it rarely looks cinematic.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Morning routine photo story with intimate details.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Real progress usually looks far more ordinary than people expect.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Reel · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What recovery actually looks like when no one is packaging it for inspiration.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Documentary-style reel with grounded daily moments.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Honest beats polished every time.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Save this reel.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">9:00 AM · Text · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Recovery can be slow, uneven, and still absolutely real.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">That sentence should not be radical, but apparently it still is.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Recovery Is a Journey</div><span class="day-sub">Day 16 · Path to Recovery</span></div>
+            <div class="day-date">Jan 16</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Timeline Carousel · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">From first step to year five: a grounded recovery timeline.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Milestone-based timeline with distinct stages.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Recovery is not invalidated by complexity, pauses, or setbacks.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this timeline.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Carousel · Hope</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Recovery is a journey, not a performance.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Illustrated path markers layered with real photos.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Slow progress still counts. Quiet progress still counts.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Save this.</div></div>
+            </div><div class="platform-card linkedin">
+              <div class="platform-head">
+                <div class="platform-name">LinkedIn</div>
+                <div class="meta">3:00 PM · Insight Post · Thought Leadership</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Communities need long-term recovery support, not just crisis response.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Process graphic with long-term support emphasis.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Too many systems are built to react, not sustain.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Comment with one support gap.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">11:00 AM · Text · Conversation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">People do not just need help starting recovery. They need help staying in it.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">That is where a lot of systems quietly fail people.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Expert Perspective</div><span class="day-sub">Day 17 · Path to Recovery</span></div>
+            <div class="day-date">Jan 17</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Expert Insight · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What clinicians wish more people understood about long-term recovery.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Portrait-led expert post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Recovery support requires consistency, access, and patience, not slogans.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">11:00 AM · Quote Graphic · Hope</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Therapy can be a lifeline, but only if people can actually reach it.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Bold quote treatment with clean illustration support.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Access matters as much as encouragement.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Save this.</div></div>
+            </div><div class="platform-card tiktok">
+              <div class="platform-head">
+                <div class="platform-name">TikTok</div>
+                <div class="meta">5:00 PM · Expert Clip · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">One therapist explains what sustainable recovery support actually requires.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Captioned expert video clip.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Turns out real support is more complex than empty motivation talk.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Send this to someone.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Recovery After Relapse</div><span class="day-sub">Day 18 · Path to Recovery</span></div>
+            <div class="day-date">Jan 18</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">1:00 PM · Video Story · Hope</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Recovery after relapse is still recovery.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Interview-style video with grounded b-roll.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">One setback does not erase everything that came before it.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this story.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">2:00 PM · Reel · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Recovery after relapse is still recovery.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Tighter vertical edit with visual detail shots.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">People need more truth and less shame.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this reel.</div></div>
+            </div><div class="platform-card tiktok">
+              <div class="platform-head">
+                <div class="platform-name">TikTok</div>
+                <div class="meta">9:00 AM · Story Video · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">A real story about relapse, return, and rebuilding.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Direct-to-camera narrative with stronger emotional framing.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Trying again is not failure.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Comment encouragement.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Encouragement Post</div><span class="day-sub">Day 19 · Path to Recovery</span></div>
+            <div class="day-date">Jan 19</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Graphic · Support</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">If you are struggling today, you are not beyond help.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-led encouragement card with sunrise gradient.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Some people need a sentence like this more than another productivity quote.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Tag someone.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">4:30 PM · Story Series · Support</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Words of encouragement from people who know this road firsthand.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Four-story handwritten-style quote series.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Support matters more when it feels real.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Send one frame.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">10:00 AM · Text · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">You do not have to earn compassion before receiving support.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">That should be obvious. It is not treated like it is.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div><div class="platform-card tiktok">
+              <div class="platform-head">
+                <div class="platform-name">TikTok</div>
+                <div class="meta">1:00 PM · Encouragement Video · Connection</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">For the person trying to hold it together today.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Slower outdoor direct-to-camera video.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">A little steadiness goes a long way.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Community Spotlight</div><span class="day-sub">Day 20 · Path to Recovery</span></div>
+            <div class="day-date">Jan 20</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Spotlight Story · Hope</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Meet Mary: three years in recovery and now helping others.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Photo-led community spotlight in volunteer setting.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Healing gets even more powerful when it turns outward.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share Mary’s story.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Carousel · Connection</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">How recovery turned into purpose.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Five-slide role-based photo story.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Stories like this hit because they feel real, not manufactured.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Save this.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">9:00 AM · Text · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Recovery stories become community change when people are given room to grow into them.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">That growth deserves visibility.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Week 3 Reflection</div><span class="day-sub">Day 21 · Path to Recovery</span></div>
+            <div class="day-date">Jan 21</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">12:30 PM · Reflection Post · Conversation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What part of this week’s recovery stories stayed with you most?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Collage recap with intimate detail shots.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Hope lands harder when it feels earned, not staged.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Comment your takeaway.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">6:00 PM · Recap Reel · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">A week of honest recovery stories and visible hope.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Unseen montage with softer pacing.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">No hero narrative. Just actual humans doing hard things.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Follow for Week 4.</div></div>
+            </div><div class="platform-card linkedin">
+              <div class="platform-head">
+                <div class="platform-name">LinkedIn</div>
+                <div class="meta">4:00 PM · Summary Post · Thought Leadership</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Recovery is an ecosystem, not a slogan.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Layered summary graphic with systems framing.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">If the ecosystem fails, individual resilience gets asked to do too much.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this with policy or program leaders.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">10:00 AM · Text · Reflection</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What story stayed with you most this week?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The best content does not just get seen. It sticks.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Reply with one moment.</div></div>
+            </div></div></div></article></div></div><div class="week-block">
+      <div class="week-overview week-4" id="week-4">
+        <div class="top">
+          <h2>Week 4: Taking Action</h2>
+          <div class="status-row">
+            <span class="status-pill live">Ready</span>
+            <span class="status-pill strategy">Strategy Locked</span>
+          </div>
+          <p><strong>Objective:</strong> Translate awareness and education into action by guiding followers toward practical next steps such as tools, volunteering, events, giving, and advocacy.</p>
+          <p><strong>Visual tone:</strong> Motivating, confident, and energizing. Cleaner calls to action, purposeful layouts, event imagery, and brand-forward compositions.</p>
+          <p><strong>Primary CTA focus:</strong> Higher-intent conversion: clicks, sign-ups, link taps, volunteer interest, and donations.</p>
+          <div class="week-actions">
+            <span class="week-action">Open</span>
+            <span class="week-action">Review</span>
+            <span class="week-action">Export</span>
+          </div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-label">Primary Focus</div><div class="m-value">Action</div></div>
+          <div class="metric"><div class="m-label">Audience State</div><div class="m-value">Ready to act</div></div>
+          <div class="metric"><div class="m-label">What this week is doing</div><div class="m-value">Convert support from passive agreement into visible participation.</div></div>
+          <div class="metric"><div class="m-label">CTA Intensity</div><div class="m-value">Higher-intent conversion: clicks, sign-ups, link taps, volunteer interest, and donations.</div></div>
+        </div>
+      </div>
+      <div class="day-grid"><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Start Here</div><span class="day-sub">Day 22 · Taking Action</span></div>
+            <div class="day-date">Jan 22</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Guide Post · Action</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Ready to help, but not sure where to start?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Checklist graphic with five action paths.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Support does not have to be dramatic. It just has to become real.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this guide.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Carousel · Action</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">5 ways to support the mission that actually matter.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Five-slide action carousel with strong modular framing.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Pick one step instead of waiting for the perfect plan.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Save this.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">9:00 AM · Text · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">One useful action still counts.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Action beats alignment theater.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Tool Walkthrough</div><span class="day-sub">Day 23 · Taking Action</span></div>
+            <div class="day-date">Jan 23</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Walkthrough · Action</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Treatment Atlas can make finding care less confusing.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Step-by-step screenshot guide.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">This is what practical help looks like when it is actually built to be useful.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Click through and explore.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Reel · Action</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Searching for treatment? Here is a clearer way to start.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Screen-record plus live narration.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The first step should not feel like a maze.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this reel.</div></div>
+            </div><div class="platform-card linkedin">
+              <div class="platform-head">
+                <div class="platform-name">LinkedIn</div>
+                <div class="meta">3:00 PM · Insight Post · Thought Leadership</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">When people cannot find the right care, that is a service design problem.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Simplified user-journey visual.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Bad navigation is not neutral. It costs people time, trust, and outcomes.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Comment on the biggest friction point.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">11:00 AM · Text · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Better systems reduce suffering.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Good tools matter because confusion is expensive.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Support FAQ</div><span class="day-sub">Day 24 · Taking Action</span></div>
+            <div class="day-date">Jan 24</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · FAQ Post · Action</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Got questions about giving or getting involved?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Q&amp;A card with four concise answers.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">People are more willing to act when the fog gets cleared out.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Comment your question.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">11:00 AM · Story Q&amp;A · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Ask us anything about volunteering, giving, or walks.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Question sticker over bright volunteer imagery.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Ask the practical questions. Those are the useful ones.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Drop your question.</div></div>
+            </div><div class="platform-card tiktok">
+              <div class="platform-head">
+                <div class="platform-name">TikTok</div>
+                <div class="meta">5:00 PM · Answer Video · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What does support look like beyond just donating money?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Direct answer video with action cutaways.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Because apparently a lot of people still think support starts and ends with cash.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Walk Story</div><span class="day-sub">Day 25 · Taking Action</span></div>
+            <div class="day-date">Jan 25</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">1:00 PM · Lived Experience CTA · Participation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Why I joined the walk and why I keep coming back.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Portrait with quote pullout and event context.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Community action sticks when it feels personal.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Sign up or share this story.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">2:00 PM · Reel · Participation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Walking together changes more than one day on a calendar.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Event montage reel with kinetic movement.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">There is something different about showing up in real life.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Tag the person you’d bring.</div></div>
+            </div><div class="platform-card tiktok">
+              <div class="platform-head">
+                <div class="platform-name">TikTok</div>
+                <div class="meta">9:00 AM · Event Video · Participation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What a walk like this actually feels like.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Participant-perspective event montage.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Real action still feels better than another empty opinion online.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Send this to someone.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Donation Appeal</div><span class="day-sub">Day 26 · Taking Action</span></div>
+            <div class="day-date">Jan 26</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Appeal Post · Action</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Your support helps people find care and fight stigma.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Impact graphic with contribution examples.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The work gets bigger when the support does.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Donate or share.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">4:30 PM · Static · Action</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Support can help turn confusion into care.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Portrait-led post with concise impact overlay.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">People do not need perfect timing. They need better systems and more support.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this in your story.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">10:00 AM · Text · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">If this mission matters to you, move it one step farther today.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">A small action still beats no action.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share or give.</div></div>
+            </div><div class="platform-card tiktok">
+              <div class="platform-head">
+                <div class="platform-name">TikTok</div>
+                <div class="meta">1:00 PM · Direct Appeal · Action</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Where support actually goes.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Narrated impact explainer with cutaways.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Because people deserve to know what they are backing.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Send this to one person.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Volunteer Push</div><span class="day-sub">Day 27 · Taking Action</span></div>
+            <div class="day-date">Jan 27</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Volunteer Sign-Up · Participation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Want to help in a visible, practical, human way?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Volunteer group photo with bright natural light.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">There is always more room for people willing to show up.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Learn more and share.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Carousel · Education</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What volunteers actually do and why it matters.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Five-slide role breakdown.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The practical work is what makes missions feel real.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Save this.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">9:00 AM · Text · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Volunteers are often the difference between messaging and actual mission delivery.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The visible work matters.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Action Check-In</div><span class="day-sub">Day 28 · Taking Action</span></div>
+            <div class="day-date">Jan 28</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">12:30 PM · Prompt Post · Conversation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">How did you take action this week, even in a small way?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-led icon prompt with action categories.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Real movement is made of small repeatable actions, not just big declarations.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Comment your action.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">6:00 PM · Poll Story · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Did you donate, volunteer, share a resource, or start a conversation this week?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Interactive poll sequence with distinct action backdrops.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Reflection matters when it leads somewhere.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Vote honestly.</div></div>
+            </div><div class="platform-card linkedin">
+              <div class="platform-head">
+                <div class="platform-name">LinkedIn</div>
+                <div class="meta">4:00 PM · Action Post · Thought Leadership</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Awareness is not the finish line. Action is.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Action-ladder graphic from awareness to advocacy.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The organizations that understand this are the ones that actually move people.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this with a leader.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">10:00 AM · Text · Conversation</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">What is one concrete step you took this week that aligned with what you say you care about?</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Specificity is where empty alignment starts to separate from real action.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Reply with your action.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Top Message Remix</div><span class="day-sub">Day 29 · Taking Action</span></div>
+            <div class="day-date">Jan 29</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Remix Graphic · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">The strongest message this month deserves another pass.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Reimagined myth-busting infographic with sharper editorial styling.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">The truth sometimes needs repetition because bad narratives are stubborn.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Remix Reel · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">The message that hit hardest deserves another round with more clarity.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Fresh-cut reel with new captions and pacing.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Sometimes the second pass is the one that actually lands.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Save and send.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">9:00 AM · Text · Reach</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Addiction is a health issue, not a character flaw.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Still true. Still needed.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article><article class="day-card">
+          <div class="day-header">
+            <div><div class="day-title">Monthly Reflection</div><span class="day-sub">Day 30 · Taking Action</span></div>
+            <div class="day-date">Jan 30</div>
+          </div>
+          <div class="day-body">
+            <div class="platform-grid"><div class="platform-card facebook">
+              <div class="platform-head">
+                <div class="platform-name">Facebook</div>
+                <div class="meta">10:30 AM · Thank-You Post · Reflection</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Here is what this community helped make visible this month.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Collage recap with unused monthly detail shots.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">One month. Four themes. A lot of useful work.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share one takeaway.</div></div>
+            </div><div class="platform-card instagram">
+              <div class="platform-head">
+                <div class="platform-name">Instagram</div>
+                <div class="meta">1:00 PM · Reflection Reel · Engagement</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">A month of stigma-breaking, treatment clarity, recovery stories, and action.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Thank-you montage with voiceover and subtle text overlays.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">This is what a sustained content system looks like when it is built with intent.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this reel.</div></div>
+            </div><div class="platform-card linkedin">
+              <div class="platform-head">
+                <div class="platform-name">LinkedIn</div>
+                <div class="meta">3:00 PM · Monthly Summary · Thought Leadership</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">This month’s strategy focused on four pillars.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Four-quadrant wrap-up graphic.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Mission-driven content still needs structure, sequencing, and intent.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Share this with a communications leader.</div></div>
+            </div><div class="platform-card bluesky">
+              <div class="platform-head">
+                <div class="platform-name">BlueSky</div>
+                <div class="meta">11:00 AM · Text · Reflection</div>
+              </div>
+              <div class="field"><span class="label">Hook</span><div class="value">Useful, compassionate content can still move people.</div></div>
+              <div class="field"><span class="label">Visual</span><div class="value">Text-only post.</div></div>
+              <div class="field"><span class="label">Caption</span><div class="value">Especially when it is specific, honest, and repeated with purpose.</div></div>
+              <div class="field"><span class="label">CTA</span><div class="value">Repost this.</div></div>
+            </div></div></div></article></div></div>
+  </section>
+
+  <section class="footer-note">
+    This planner is intended to guide planning, production, review, and publishing. Timing, channel selection, and CTA intensity should be adjusted when live performance data or campaign priorities indicate a stronger opportunity.
+  </section>
+</main>
+</div>
+</body>
+</html>
