@@ -16,7 +16,7 @@ function isMobileScene() {
 }
 
 function getStarCount() {
-  return isMobileScene() ? 25 : 90;
+  return isMobileScene() ? 0 : 90;
 }
 
 function openSidebar() {
@@ -130,37 +130,52 @@ function createStars(count = 90) {
   }
 }
 
-function updateScene() {
-  if (!sun || !moon) {
+function updateMobileScene(progress = null) {
+  if (!isMobileScene()) {
+    root.style.setProperty("--mobile-night-opacity", "0");
     return;
   }
 
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollProgress = progress ?? (docHeight > 0 ? clamp(scrollTop / docHeight) : 0);
+
+  let nightOpacity = 0;
+
+  if (scrollProgress < 0.35) {
+    nightOpacity = 0;
+  } else if (scrollProgress < 0.65) {
+    const phaseProgress = (scrollProgress - 0.35) / 0.3;
+    nightOpacity = phaseProgress * 0.4;
+  } else if (scrollProgress < 0.85) {
+    const phaseProgress = (scrollProgress - 0.65) / 0.2;
+    nightOpacity = 0.4 + (phaseProgress * 0.5);
+  } else {
+    const phaseProgress = (scrollProgress - 0.85) / 0.15;
+    nightOpacity = 0.9 + (phaseProgress * 0.1);
+  }
+
+  root.style.setProperty("--mobile-night-opacity", `${clamp(nightOpacity)}`);
+}
+
+function updateScene() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
   const progress = docHeight > 0 ? clamp(scrollTop / docHeight) : 0;
+
+  if (isMobileScene()) {
+    updateMobileScene(progress);
+    return;
+  }
+
+  root.style.setProperty("--mobile-night-opacity", "0");
+
+  if (!sun || !moon) {
+    return;
+  }
 
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
-
-  if (isMobileScene()) {
-    const sunX = progress * viewportWidth * 0.8;
-    const sunY = viewportHeight * 0.4 - Math.sin(progress * Math.PI) * viewportHeight * 0.15;
-    const sunOpacity = 1 - Math.max(0, (progress - 0.8) / 0.2);
-
-    sun.style.transform = `translate3d(${sunX}px, ${sunY}px, 0)`;
-    sun.style.opacity = `${clamp(sunOpacity)}`;
-    root.style.setProperty("--moon-opacity", "0");
-    root.style.setProperty("--stars-opacity", "0");
-
-    if (cloudTopLayer && cloudBottomLayer) {
-      cloudTopLayer.style.transform = "";
-      cloudBottomLayer.style.transform = "";
-      cloudTopLayer.style.filter = "none";
-      cloudBottomLayer.style.filter = "none";
-    }
-
-    return;
-  }
 
   const sunWidth = viewportWidth <= 640 ? 152 : viewportWidth <= 980 ? 180 : 196;
 

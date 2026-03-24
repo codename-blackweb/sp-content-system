@@ -16,6 +16,7 @@
   --moon-x: 0px;
   --moon-y: 0px;
   --moon-rotate: 0deg;
+  --mobile-night-opacity: 0;
   --paper: #ffffff;
   --paper-soft: #f7fbff;
   --paper-glass: rgba(255, 255, 255, 0.24);
@@ -342,6 +343,10 @@ body.sidebar-open {
   z-index: 0;
   animation: rocket-float 3.8s ease-in-out infinite;
   will-change: transform;
+}
+
+.mobile-scene {
+  display: none;
 }
 
 .top-nav {
@@ -1669,39 +1674,147 @@ html.motion-ready .reveal-on-scroll.is-visible {
     overflow-x: hidden;
   }
 
-  .cloud,
-  .sun,
-  .moon,
-  .stars-layer {
-    filter: none !important;
-    backdrop-filter: none !important;
+  .sky-stage,
+  .page-rocket {
+    display: none !important;
   }
 
-  .cloud {
-    max-width: none !important;
-    height: auto !important;
-    object-fit: unset !important;
-    will-change: auto !important;
-    filter: none !important;
-  }
-
-  .sky-stage {
-    overflow: hidden;
+  .mobile-scene {
+    display: block;
+    position: fixed;
     inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
   }
 
-  .cloud-top {
-    width: 260vw !important;
-    left: 38% !important;
-    top: -1vw !important;
-    transform: translateX(-50%) !important;
+  .mobile-sky {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(to top, #7a4c63 0%, #4f6b96 42%, #b9d6f2 100%);
   }
 
-  .cloud-bottom {
-    width: 285vw !important;
-    left: 64% !important;
-    bottom: -1vw !important;
-    transform: translateX(-50%) rotate(180deg) !important;
+  .mobile-night-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    opacity: var(--mobile-night-opacity);
+    background: linear-gradient(to top, rgba(7, 10, 24, 0.92) 0%, rgba(18, 31, 66, 0.68) 45%, rgba(255, 140, 90, 0.15) 100%);
+    pointer-events: none;
+    transition: opacity 0.18s linear;
+  }
+
+  .mobile-stars {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    opacity: calc(0.15 + (var(--mobile-night-opacity) * 0.85));
+    transition: opacity 0.18s linear;
+  }
+
+  .mobile-stars::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(2px 2px at 20% 30%, white, transparent),
+      radial-gradient(1.5px 1.5px at 70% 20%, white, transparent),
+      radial-gradient(2px 2px at 40% 60%, white, transparent),
+      radial-gradient(1px 1px at 85% 75%, white, transparent),
+      radial-gradient(1.5px 1.5px at 10% 80%, white, transparent),
+      radial-gradient(2px 2px at 60% 50%, white, transparent);
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: mobile-stars-twinkle 6s ease-in-out infinite;
+  }
+
+  .mobile-moon {
+    position: absolute;
+    top: 12%;
+    right: 10%;
+    z-index: 3;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #f9fbff 0%, #dde6f5 55%, #c4d0e6 100%);
+    box-shadow: 0 0 10px rgba(220, 232, 255, 0.15), 0 0 30px rgba(220, 232, 255, 0.08);
+    opacity: calc(0.15 + (var(--mobile-night-opacity) * 0.85));
+    animation: mobile-moon-float 8s ease-in-out infinite;
+    transition: opacity 0.18s linear;
+  }
+
+  .mobile-clouds {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 4;
+    width: 180vw;
+    max-width: none;
+    height: auto;
+    transform: translateX(-50%);
+    animation: mobile-cloud-drift 11s ease-in-out infinite;
+    opacity: calc(1 - (var(--mobile-night-opacity) * 0.22));
+    will-change: transform;
+    transition: opacity 0.18s linear;
+  }
+
+  .mobile-rocket {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 5;
+    width: min(70vw, 340px);
+    height: auto;
+    transform: translateX(-50%);
+    animation: mobile-rocket-float 4.2s ease-in-out infinite;
+    opacity: calc(1 - (var(--mobile-night-opacity) * 0.08));
+    will-change: transform;
+    transition: opacity 0.18s linear;
+  }
+
+  @keyframes mobile-stars-twinkle {
+    0%,
+    100% {
+      opacity: 0.5;
+    }
+
+    50% {
+      opacity: 0.85;
+    }
+  }
+
+  @keyframes mobile-moon-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  @keyframes mobile-cloud-drift {
+    0%,
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+      transform: translateX(-50%) translateY(-3px);
+    }
+  }
+
+  @keyframes mobile-rocket-float {
+    0%,
+    100% {
+      transform: translateX(-50%) translateY(0) rotate(-1deg);
+    }
+
+    50% {
+      transform: translateX(-50%) translateY(-12px) rotate(1deg);
+    }
   }
 }
 
