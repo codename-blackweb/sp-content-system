@@ -153,8 +153,8 @@ function updateScene() {
     root.style.setProperty("--stars-opacity", "0");
 
     if (cloudTopLayer && cloudBottomLayer) {
-      cloudTopLayer.style.transform = "none";
-      cloudBottomLayer.style.transform = "rotate(180deg)";
+      cloudTopLayer.style.transform = "translateX(-50%)";
+      cloudBottomLayer.style.transform = "translateX(-50%) rotate(180deg)";
       cloudTopLayer.style.filter = "none";
       cloudBottomLayer.style.filter = "none";
     }
